@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imagenes/logo.png">
+    <title>Autoexpresión</title>
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Estilo personalizado -->
+    <link rel="stylesheet" href="juego-autoexpresion.css">
+</head>
+<body class="d-flex flex-column align-items-center bg-light">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm w-100">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="imagenes/logo.png" alt="Logo Saber+" width="50" height="50" class="mr-3">
+                <span>Saber+</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main class="container my-5">
+        <!-- Texto Justificado -->
+        <div class="row mb-5">
+            <div class="col-md-12">
+    <h2 class="text-center" style="color: #145a32"><strong>Clasificación de Sentimientos</strong></h2>
+                <p class="lead text-center">
+                    <strong>Arrastra los elementos a la categoría correspondiente. ¡Intenta completar todos los niveles!</strong>
+                </p>
+            </div>
+        </div>
+    <body>
+        <div id="game-container">
+            <div id="categories">
+                <div class="category" data-feeling="feliz">
+                    😊 <br> Feliz
+                </div>
+                <div class="category" data-feeling="triste">
+                    😢 <br> Triste
+                </div>
+                <div class="category" data-feeling="enojado">
+                    😠 <br> Enojado
+                </div>
+            </div>
+    
+            <div id="items">
+                <!-- Elementos generados dinámicamente -->
+            </div>
+    
+            <div id="feedback"></div>
+        </div>
+    
+        <footer class="text-center">
+            <div id="scoreboard">
+                <span id="score" style="color: #145a32">Puntos: 0</span>
+                <span id="timer" style="color: #145a32">Tiempo: 60s</span>
+            </div>
+            <button id="reset-button">Reiniciar</button>
+        </footer>
+        <script src="juego-autoexpresion.js"></script>
+</body>
+</html>

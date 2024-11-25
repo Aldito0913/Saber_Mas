@@ -1,0 +1,235 @@
+/* Estilos Generales */
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+    height: 100vh;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Navbar */
+.navbar {
+    transition: all 0.3s ease;
+}
+
+.navbar:hover {
+    background-color: rgb(174, 223, 230); /* Color de fondo suave al pasar el ratón */
+}
+
+.navbar-brand {
+    font-family: 'Golos Text', cursive;
+    font-size: 1.8em;
+    color: #00796b !important; /* Verde oscuro */
+}
+
+.navbar-nav .nav-item .nav-link {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    font-size: 1.2em;
+    color: #00796b;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #6bcebd; /* Color verde más claro al pasar el ratón */
+}
+
+h2 {
+    font-size: 2em;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    color: #333;
+}
+
+/* From Uiverse.io by zjssun */ 
+button {
+    position: relative;
+    padding: 10px 22px;
+    border-radius: 6px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    background-color: #932ae8;
+    transition: all 0.2s ease;
+  }
+  
+  button:active {
+    transform: scale(0.96);
+  }
+  
+  button:before,
+  button:after {
+    position: absolute;
+    content: "";
+    width: 150%;
+    left: 50%;
+    height: 100%;
+    transform: translateX(-50%);
+    z-index: -1000;
+    background-repeat: no-repeat;
+  }
+  
+  button:hover:before {
+    top: -70%;
+    background-image: radial-gradient(circle, #932ae8 20%, transparent 20%),
+      radial-gradient(circle, transparent 20%, #932ae8 20%, transparent 30%),
+      radial-gradient(circle, #932ae8 20%, transparent 20%),
+      radial-gradient(circle, #932ae8 20%, transparent 20%),
+      radial-gradient(circle, transparent 10%, #932ae8 15%, transparent 20%),
+      radial-gradient(circle, #932ae8 20%, transparent 20%),
+      radial-gradient(circle, #932ae8 20%, transparent 20%),
+      radial-gradient(circle, #932ae8 20%, transparent 20%),
+      radial-gradient(circle, #932ae8 20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+      10% 10%, 18% 18%;
+    background-position: 50% 120%;
+    animation: greentopBubbles 0.6s ease;
+  }
+  
+  @keyframes greentopBubbles {
+    0% {
+      background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+        40% 90%, 55% 90%, 70% 90%;
+    }
+  
+    50% {
+      background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+        50% 50%, 65% 20%, 90% 30%;
+    }
+  
+    100% {
+      background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+        50% 40%, 65% 10%, 90% 20%;
+      background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+  }
+  
+  button:hover::after {
+    bottom: -70%;
+    background-image: radial-gradient(circle, #932ae8 20%, transparent 20%),
+      radial-gradient(circle, #932ae8 20%, transparent 20%),
+      radial-gradient(circle, transparent 10%, #932ae8 15%, transparent 20%),
+      radial-gradient(circle, #932ae8 20%, transparent 20%),
+      radial-gradient(circle, #932ae8 20%, transparent 20%),
+      radial-gradient(circle, #932ae8 20%, transparent 20%),
+      radial-gradient(circle, #932ae8 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+    background-position: 50% 0%;
+    animation: greenbottomBubbles 0.6s ease;
+  }
+  
+  @keyframes greenbottomBubbles {
+    0% {
+      background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+        70% -10%, 70% 0%;
+    }
+  
+    50% {
+      background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+        105% 0%;
+    }
+  
+    100% {
+      background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+        110% 10%;
+      background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+  }
+
+/* Contenedor de Flashcards */
+#flashcardContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+/* Flashcard en el contenedor */
+.flashcard {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(34, 8, 153, 0.568);
+    margin: 20px;
+    padding: 20px;
+    max-width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease, opacity 0.5s ease;
+}
+
+.flashcard:hover {
+    transform: scale(1.05);
+}
+
+/* Icono de altavoz */
+.speaker-icon {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+}
+
+/* Imagen de la Flashcard */
+.image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Estilo de botones */
+button {
+    padding: 10px 22px;
+    border-radius: 6px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    background-color: #932ae8;
+    transition: all 0.2s ease;
+    font-size: 1em;
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+button:hover {
+    background-color: #6bcebd;
+    transform: scale(1.05);
+}
+
+/* Botón de Inicio */
+#home-button {
+    padding: 10px 20px;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+#home-button:hover {
+    background-color: #388e3c;
+}
+
+/* Resposividad de los botones y flashcards */
+@media (max-width: 768px) {
+    .flashcard {
+        padding: 15px;
+        max-width: 250px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 1.2em;
+    }
+
+    #home-button {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 1.2em;
+    }
+}
